@@ -1,0 +1,28 @@
+1.	Create a S3 bucket(1st Time):
+aws s3api create-bucket --bucket kd-aws-test --create-bucket-configuration LocationConstraint=eu-west-1
+2.	Create a S3 bucket(from 2nd Time):
+aws s3 mb s3://kd-aws-test2
+3.	List the bucket:
+aws s3 ls s3://kd-aws-test
+4.	Delete a bucket:
+aws s3 rb s3://kd-aws-test2
+5.	Delete a bucket with contents:
+aws s3 rb s3://kd-aws-test2 --force
+6.	Copy a file from local folder to s3 bucket:
+aws s3 cp file1.txt s3://kd-aws-test2
+7.	Copy all files from local folder to s3 bucket:
+aws s3 sync . s3://kd-aws-test2
+8.	Show all files and folders from s3 bucket:
+aws s3 ls s3://kd-aws-test2
+9.	Show all files under all folders from s3 bucket:
+aws s3 ls s3://kd-aws-test2 –recursive
+10.	Print contents of a s3 file on cmd/terminal:
+aws s3 cp s3://kd-aws-test2/file1.txt -  
+11.	Delete a file from s3 bucket:
+aws s3 rm s3://kd-aws-test2/file1.txt
+12.	Delete all files from s3 bucket:
+aws s3 rm s3://kd-aws-test2/ --recursive
+13.	Create a folder on s3 bucket:
+aws s3 cp file2.txt s3://kd-aws-test2/com-files/
+Here file2.txt should be in current folder in local pc
+
