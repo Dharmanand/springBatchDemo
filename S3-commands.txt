@@ -15,7 +15,7 @@ aws s3 sync . s3://kd-aws-test2
 8.	Show all files and folders from s3 bucket:
 aws s3 ls s3://kd-aws-test2
 9.	Show all files under all folders from s3 bucket:
-aws s3 ls s3://kd-aws-test2 �recursive
+aws s3 ls s3://kd-aws-test2 –recursive
 10.	Print contents of a s3 file on cmd/terminal:
 aws s3 cp s3://kd-aws-test2/file1.txt -  
 11.	Delete a file from s3 bucket:
@@ -25,4 +25,8 @@ aws s3 rm s3://kd-aws-test2/ --recursive
 13.	Create a folder on s3 bucket:
 aws s3 cp file2.txt s3://kd-aws-test2/com-files/
 Here file2.txt should be in current folder in local pc
+14.	Download a file from s3 bucket to local:
+aws s3 cp s3://kd-aws-test2/com-files1/file2.txt D:/fffff/abc
+15.	Download all folders and it’s files from s3 bucket to local:
+aws s3 cp s3://kd-aws-test2/ D:/fffff/abc --recursive
 
